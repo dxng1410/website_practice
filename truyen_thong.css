@@ -67,6 +67,140 @@ header {
     margin-top: 1px;
 }
 
+/* ===== TOP NAVIGATION ===== */
+.tt-top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 22px 5%; /* Căn lề hai bên giống hệt style.css của trang chủ */
+}
+
+.tt-nav-container {
+    display: flex;
+    justify-content: space-between; /* Đẩy 3 khối (Logo - Nav - Action) ra 3 góc */
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; /* Bắt buộc không cho phép rớt dòng */
+    gap: 20px;
+}
+
+/* 1. Khối Logo */
+.tt-logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-purple);
+}
+
+.logo-icon-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tt-logo .logo-main {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    color: var(--text-purple);
+}
+
+.tt-logo .logo-leaf {
+    font-size: 22px;
+    margin-top: -4px;
+}
+
+.tt-logo .logo-sub {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-purple);
+    margin-top: 1px;
+}
+
+/* 2. Khối Menu Điều Hướng (Nav) */
+.tt-nav-bar {
+    background-color: #F7DAFC !important; /* Dùng mã màu trực tiếp và ép nhận màu */
+    padding: 8px 15px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Thêm chút bóng đổ nhẹ cho nổi khối */
+}
+
+.tt-nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.tt-nav-bar a {
+    text-decoration: none;
+    color: var(--text-purple);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: block;
+    white-space: nowrap; /* Chống rớt chữ thành 2 hàng bên trong nút */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tt-nav-bar li.active a, .tt-nav-bar a:hover {
+    background: rgba(255, 255, 255, 0.25); /* Hiệu ứng hover giống trang chủ */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* 3. Khối Nút Thao Tác (Actions) */
+.tt-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    background-color: var(--nav-pink);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-purple);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lang-btn .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d156eb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.search-btn {
+    background-color: #F7DAFC !important;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-purple);
+    flex-shrink: 0;
+}
+
 nav{
     color:#6a2b86;
     background-color: var(--bg-pink);
