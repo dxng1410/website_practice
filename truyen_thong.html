@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="truyen_thong.css">
 </head>
-<body>
 
 <header class="tt-top-nav">
     <div class="tt-nav-container">
@@ -21,17 +20,17 @@
         
         <nav class="tt-nav-bar">
             <ul>
-                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="trangchu.html">Trang Chủ</a></li>
                 <li><a href="#">Giới Thiệu</a></li>
                 <li><a href="daotao.html">Đào Tạo</a></li>
                 <li><a href="#">Nghiên Cứu</a></li>
-                <li class="active"><a href="#">Truyền Thông</a></li>
-                <li><a href="#">Góc Sinh Viên</a></li>
+                <li class="active"><a href="truyen_thong.html">Truyền Thông</a></li>
+                <li><a href="index.html">Góc Sinh Viên</a></li>
             </ul>
         </nav>
 
         <div class="tt-header-actions">
-            <button class="lang-btn">VIE <span class="dot"></span></button>
+            <!-- <button class="lang-btn">VIE <span class="dot"></span></button> -->
             <button class="search-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="11" cy="11" r="8"></circle>
@@ -183,23 +182,24 @@
     </div>
 </section>
 
-<footer class="tt-footer">
-    <div class="tt-footer-content">
-        <div class="tt-footer-brand">
-            <div class="tt-footer-logos">
-                <img src="logo_ueh.png" alt="UEH">
-                <img src="logo_SMD.png" alt="SMD">
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logos">
+                    <img src="W-CTD-1.png" alt="UEH Logo" class="footer-logo">
+                    <img src="Butterfly-300x154.png" alt="SMD Logo" class="footer-logo">
+                </div>
+                <h3 class="footer-institute">Khoa Thiết kế Truyền thông<br>Trường Đại học Kinh tế Thành phố Hồ Chí Minh</h3>
+                <p class="footer-contact">
+                    279 Nguyễn Tri Phương, Phường Diên Hồng, Quận 10, TP.HCM<br>
+                    Điện thoại: +84 283 8295 299<br>
+                    Email: smd@ueh.edu.vn<br><br>
+                    Bản quyền © 2022. Đại học Kinh tế Thành phố Hồ Chí Minh.<br>
+                    Đã đăng ký bản quyền. Phát triển bởi SMD.
+                </p>
             </div>
-            <h3 class="tt-footer-khoa">Khoa Thiết kế Truyền thông</h3>
-            <p class="tt-footer-uni">Trường Đại học Kinh tế Thành phố Hồ Chí Minh</p>
-            <p class="tt-footer-contact">279 Nguyễn Tri Phương, Phường Diên Hồng, Quận 10, TP.HCM<br>
-            Điện thoại: +84 283 8295 299<br>
-            Email: smd@ueh.edu.vn</p>
-            <p class="tt-footer-copyright">Bản quyền © 2022. Đại học Kinh tế Thành phố Hồ Chí Minh.<br>Đã đăng ký bản quyền. Phát triển bởi SMD.</p>
-        </div>
-        
-        <div class="tt-footer-links">
-            <div class="tt-footer-column">
+
+            <div class="footer-col links-col">
                 <h3>Khám phá SMD</h3>
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
@@ -209,17 +209,19 @@
                     <li><a href="#">Tuyển dụng</a></li>
                 </ul>
             </div>
-            <div class="tt-footer-column">
+
+            <div class="footer-col links-col">
                 <h3>Chương trình Đào tạo</h3>
                 <ul>
-                    <li><a href="#">Chương trình đào tạo</a></li>
+                    <li><a href="daotao.html">Chương trình đào tạo</a></li>
                     <li><a href="#">Truyền thông số và thiết kế đa phương tiện</a></li>
                     <li><a href="#">Công nghệ nghệ thuật (ArtTech)</a></li>
                     <li><a href="#">Nghiên cứu & Học thuật</a></li>
                     <li><a href="#">Tra cứu văn bằng</a></li>
                 </ul>
             </div>
-            <div class="tt-footer-column">
+
+            <div class="footer-col links-col">
                 <h3>Sinh viên & Doanh nghiệp</h3>
                 <ul>
                     <li><a href="#">Hoạt động sinh viên</a></li>
@@ -228,16 +230,22 @@
                     <li><a href="#">Đối tác Doanh nghiệp</a></li>
                     <li><a href="#">Mạng lưới Cựu sinh viên (Alumni)</a></li>
                 </ul>
-                <div class="tt-social-icons">
-                    <a href="#">in</a>
-                    <a href="#">yt</a>
-                    <a href="#">fb</a>
-                    <a href="#">ig</a>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-
+    </footer>
 </body>
 </html>
