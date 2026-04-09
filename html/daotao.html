@@ -355,13 +355,36 @@
                 <a href="#" class="social-icon" aria-label="Instagram">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                 </a>
-<<<<<<< HEAD
                 </div>
-=======
->>>>>>> origin/main
             </div>
         </div>
     </footer>
+    <script>
+/* Accordion toggle */
+function toggleItem(header){
+  const item = header.closest('.roadmap-item');
+  item.classList.toggle('open');
+}
 
+/* Header scroll */
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 80);
+});
+
+/* Form submit */
+document.getElementById('submitBtn').addEventListener('click',function(){
+  const inputs = document.querySelectorAll('#form-section input, #form-section select');
+  let valid = true;
+  inputs.forEach(el=>{ if(!el.value) valid=false; });
+  if(valid){
+    this.textContent='✓ Đăng Ký Thành Công!';
+    this.style.background='linear-gradient(90deg,#22c55e,#16a34a)';
+  } else {
+    this.textContent='Vui lòng điền đầy đủ thông tin';
+    this.style.background='linear-gradient(90deg,#ef4444,#dc2626)';
+    setTimeout(()=>{ this.textContent='Đăng Ký Ngay'; this.style.background=''; },2000);
+  }
+});
+</script>
 </body>
 </html>
