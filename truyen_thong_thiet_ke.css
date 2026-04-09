@@ -1,0 +1,490 @@
+/* ============================================================
+   TRUYEN_THONG_THIET_KE.CSS
+   Chi tiết ngành Truyền Thông & Thiết Kế
+   ============================================================ */
+
+:root {
+    --bg-pink: #F7DAFC;
+    --text-purple: #6a2b86;
+    --accent-purple: #7c1faa;
+    --accent-light: #f0e5f7;
+    --border-gray: #ddd;
+    --bg-light-gray: #f5f5f5;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    gap: 60px;
+    min-height: calc(100vh - 100px);
+}
+
+.hero-left {
+    flex: 1;
+    position: relative;
+}
+
+.hero-big-title {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    left: 3px;
+    top: 75px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: ExtraBold;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.011em;
+    
+    color: #ffffff;
+    
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    color: #ffffff;
+    font-style: italic;
+    margin: 280px 0 20px 0;
+}
+
+.hero-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-purple);
+    margin: 20px 0 20px 0;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.8;
+    margin: 0 0 30px 0;
+    max-width: 500px;
+}
+
+.btn-kham-pha {
+    padding: 12px 30px;
+    background: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-kham-pha:hover {
+    background: var(--text-purple);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-placeholder {
+    width: 300px;
+    height: 300px;
+    background: #e8e8e8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+/* ===== PROGRAM OVERVIEW SECTION ===== */
+.program-overview-section {
+    padding: 80px 5%;
+    background: white;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-purple);
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.overview-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.overview-box {
+    background: #f0f0f0;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.box-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+/* ===== CURRICULUM PATH SECTION ===== */
+.curriculum-path-section {
+    padding: 80px 5%;
+    background: #f9f9f9;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+.year-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-gray);
+}
+
+.year-header {
+    background: var(--bg-light-gray);
+    padding: 20px 30px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid var(--border-gray);
+    transition: all 0.3s ease;
+}
+
+.year-header:hover {
+    background: #f0f0f0;
+}
+
+.year-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--text-purple);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year-toggle {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.year-content {
+    padding: 30px;
+    border-top: 1px solid var(--border-gray);
+}
+
+.year-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-left h4 {
+    font-size: 16px;
+    color: var(--text-purple);
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.subjects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.subject-item {
+    height: 12px;
+    background: #ddd;
+    border-radius: 2px;
+    width: 70%;
+}
+
+.main-subjects-label {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 15px 0 5px 0;
+    font-weight: 600;
+}
+
+.main-subjects-content {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.card-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.subject-box {
+    aspect-ratio: 1;
+    background: #ddd;
+    border-radius: 6px;
+}
+
+.year-note {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin: 15px 0 30px 0;
+}
+
+.semesters-section {
+    margin-top: 30px;
+}
+
+.semester-item {
+    margin-bottom: 20px;
+}
+
+.semester-title {
+    font-size: 14px;
+    color: var(--text-purple);
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    cursor: pointer;
+}
+
+.semester-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.semester-table thead {
+    background: var(--bg-light-gray);
+}
+
+.semester-table th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--border-gray);
+    color: #666;
+    font-weight: 600;
+}
+
+.semester-table td {
+    padding: 10px;
+    border: 1px solid var(--border-gray);
+    color: #555;
+}
+
+.semester-table tbody tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+/* ===== STUDENT SHOWCASE SECTION ===== */
+.student-showcase-section {
+    padding: 80px 5%;
+    background: white;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.carousel-btn {
+    background: none;
+    border: 2px solid var(--text-purple);
+    color: var(--text-purple);
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: var(--text-purple);
+    color: white;
+}
+
+.carousel-slide {
+    flex: 1;
+    display: none;
+    max-width: 300px;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.showcase-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #e8e8e8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: #999;
+}
+
+.card-student-info {
+    font-size: 12px;
+    color: #999;
+    margin: 10px 0 5px 0;
+}
+
+.card-title {
+    font-size: 16px;
+    color: var(--text-purple);
+    margin: 10px 0 10px 0;
+    font-weight: 600;
+}
+
+.card-description {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        padding: 60px 5%;
+        gap: 40px;
+    }
+
+    .hero-big-title {
+        font-size: 36px;
+    }
+
+    .overview-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .year-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-big-title {
+        font-size: 28px;
+    }
+
+    .hero-image-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .overview-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-container {
+        gap: 10px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .carousel-slide {
+        max-width: 100%;
+    }
+
+    .year-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-right {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 40px 3%;
+        gap: 20px;
+    }
+
+    .hero-big-title {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .program-overview-section,
+    .curriculum-path-section,
+    .student-showcase-section {
+        padding: 40px 3%;
+    }
+
+    .carousel-container {
+        flex-wrap: wrap;
+    }
+
+    .carousel-slide {
+        flex: 1 1 100%;
+        min-width: 250px;
+    }
+}
+
