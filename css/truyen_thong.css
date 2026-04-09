@@ -1,0 +1,693 @@
+/* ===== RESET & CƠ BẢN ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+:root {
+    --bg-pink: #F7DAFC; 
+    --text-purple: #6a2b86;
+    --accent-purple: #7c1faa;
+    --glass-inner: rgba(255, 255, 255, 0.25);
+    --btn-gradient: linear-gradient(90deg, #9b30ee, #cc55ff);
+}
+/* #9b30ee, #cc55ff */
+body {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* ===== HEADER & NAV ===== */
+.gradient-bg {
+    /* Điều chỉnh tâm gradient ra giữa một chút để màu tỏa đều đặn hơn */
+    background: radial-gradient(ellipse at 50% 40%, #fbedfe 0%, #e8d5fc 40%, #d8e5ff 70%, #dce8ff 100%);
+    position: relative;
+    padding-bottom: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 5%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: #6a2b86;
+}
+
+.logo-icon-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.logo-main {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    color: #7c1faa;
+}
+
+.logo-leaf {
+    font-size: 22px;
+    margin-top: -4px;
+}
+
+.logo-sub {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6a2b86;
+    margin-top: 1px;
+}
+
+/* ===== TOP NAVIGATION ===== */
+.tt-top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 22px 5%; /* Căn lề hai bên giống hệt style.css của trang chủ */
+}
+
+.tt-nav-container {
+    display: flex;
+    justify-content: space-between; /* Đẩy 3 khối (Logo - Nav - Action) ra 3 góc */
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; /* Bắt buộc không cho phép rớt dòng */
+    gap: 20px;
+}
+
+/* 1. Khối Logo */
+.tt-logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-purple);
+}
+
+.logo-icon-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tt-logo .logo-main {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    color: var(--text-purple);
+}
+
+.tt-logo .logo-leaf {
+    font-size: 22px;
+    margin-top: -4px;
+}
+
+.tt-logo .logo-sub {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-purple);
+    margin-top: 1px;
+}
+
+/* 2. Khối Menu Điều Hướng (Nav) */
+.tt-nav-bar {
+    background-color: #F7DAFC !important; /* Dùng mã màu trực tiếp và ép nhận màu */
+    padding: 8px 15px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Thêm chút bóng đổ nhẹ cho nổi khối */
+}
+
+.tt-nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.tt-nav-bar a {
+    text-decoration: none;
+    color: var(--text-purple);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: block;
+    white-space: nowrap; /* Chống rớt chữ thành 2 hàng bên trong nút */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tt-nav-bar li.active a, .tt-nav-bar a:hover {
+    background: rgba(255, 255, 255, 0.25); /* Hiệu ứng hover giống trang chủ */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* 3. Khối Nút Thao Tác (Actions) */
+.tt-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    background-color: var(--nav-pink);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-purple);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lang-btn .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d156eb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.search-btn {
+    background-color: #F7DAFC !important;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-purple);
+    flex-shrink: 0;
+}
+
+nav{
+    color:#6a2b86;
+    background-color: var(--bg-pink);
+    padding: 10px 15px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+     text-decoration: none;
+    color: var(--text-purple);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    display: block;
+}
+
+nav li.active a, nav a:hover {
+    background: var(--glass-inner);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--text-purple);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 
+        inset 0 4px 6px rgba(255, 255, 255, 0.2), 
+        0 8px 20px rgba(90, 26, 97, 0.1),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1.5px);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    background-color: #fae8ff; /* Sửa màu nền cho khớp */
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #6a2b86;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.lang-btn .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d156eb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.search-btn {
+    background-color: #fae8ff; /* Đổi thành nền khối, bỏ viền */
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #6a2b86;
+}
+
+/* ===== HERO SECTION ===== */
+.tt-hero {
+    background: url('../pic/bg_tt.png') center/cover no-repeat;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    padding: 100px 40px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tt-hero-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.tt-hero-title {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 250px; /* Space between title and subtitle */
+}
+
+.tt-hero-subtitle {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: right;
+}
+
+.text-white { color: #ffffff; }
+.text-pink { color: var(--accent-pink); }
+
+/* ===== STATS SECTION ===== */
+.tt-stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 80px 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.tt-stat-number {
+    font-size: 100px;
+    font-weight: 900;
+    color: #e47ef4;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.tt-stat-label {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-purple);
+    line-height: 1.3;
+}
+
+/* ===== CHƯƠNG TRÌNH HỌC SECTION ===== */
+.tt-programs-section {
+    padding: 60px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.tt-section-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.tt-programs-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tt-program-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.tt-program-gradient {
+    height: 150px;
+    background: linear-gradient(135deg, #a88be8, #e4a1f8);
+    opacity: 0.8;
+}
+
+.tt-program-content {
+    padding: 30px;
+    flex: 1;
+    position: relative;
+}
+
+.tt-program-content h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.tt-program-meta {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.tt-btn-explore {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: #e47ef4;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ===== SMD MOMENTS SECTION ===== */
+.tt-moments-section {
+    background: var(--bg-pink-light);
+    padding: 80px 40px;
+}
+
+.tt-moments-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tt-story-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tt-story-class {
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.tt-story-text p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.tt-moments-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #d368b6, #f39c12);
+}
+
+.tt-moments-image-wrapper img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.tt-moments-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.tt-moments-badge strong {
+    color: var(--text-purple);
+    font-size: 16px;
+}
+
+/* ===== TIN TỨC SECTION ===== */
+.tt-news-section {
+    padding: 80px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.tt-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.tt-news-image {
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tt-news-content h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tt-news-date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.tt-news-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tt-tag {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: bold; border-radius: 4px;
+}
+.tag-red { background: #e53935; }
+.tag-yellow { background: #fbc02d; }
+
+.tt-featured-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.tt-featured-left h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tt-featured-date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.tt-featured-description {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.tt-featured-image {
+    height: 350px;
+    border-radius: 10px;
+}
+
+/* ===== CTA SECTION ===== */
+.tt-cta-section {
+    background: linear-gradient(135deg, #1a0033 0%, #4a0080 30%, #8b00ff 60%, #ff00ff 100%);
+    padding: 100px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tt-cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><defs><filter id="blur"><feGaussianBlur in="SourceGraphic" stdDeviation="40"/></filter></defs><circle cx="200" cy="150" r="200" fill="rgba(255,100,255,0.2)" filter="url(%23blur)"/><circle cx="1200" cy="150" r="250" fill="rgba(100,100,255,0.2)" filter="url(%23blur)"/></svg>');
+    background-size: cover;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.tt-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.tt-cta-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+.tt-cta-btn {
+    padding: 16px 40px;
+    background: #c74fb4;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tt-cta-btn:hover {
+    background: #b03fa3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(199, 79, 180, 0.4);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background-color: var(--text-purple);
+    padding: 60px 5%;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+    gap: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.footer-logos {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+.footer-logo {
+    height: 50px;
+    object-fit: contain;
+}
+.footer-institute {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFF2F6;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.footer-contact {
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+.links-col h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+.links-col ul {
+    list-style: none;
+}
+.links-col ul li {
+    margin-bottom: 12px;
+}
+.links-col ul li a {
+    color: #CACACA;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.links-col ul li a:hover {
+    color: #FFFFFF;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.social-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* ===== RESPONSIVE CƠ BẢN ===== */
+@media (max-width: 1024px) {
+    .title-gradient { font-size: 80px; }
+    .main-nav a { padding: 10px 15px; font-size: 14px; }
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .site-header { flex-direction: column; gap: 20px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; }
+    .members-photos, .team-info { grid-template-columns: repeat(2, 1fr); }
+    .title-gradient { font-size: 50px; }
+    .banner-content h1 { font-size: 32px; }
+    .footer-container { grid-template-columns: 1fr; }
+    .team-info { margin-top: 0; padding-top: 10px; }
+}
