@@ -53,14 +53,14 @@ body {
 }
 
 .logo-img {
-    height: 48px;
-    width: auto;
-    object-fit: contain;
+    width: 120px;       /* Đặt chiều rộng cố định 120px */
+    height: 86px;       /* Đặt chiều cao cố định 86px */
+    object-fit: contain; /* Giúp logo không bị méo nếu tỷ lệ ảnh gốc khác 120x86 */
     display: block;
-
-    /* ← Thêm dòng này để chuyển sang màu tím #6a2b86 */
-    filter: invert(18%) sepia(64%) saturate(1011%) hue-rotate(263deg) brightness(90%) contrast(107%);
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
+
 .logo-icon-wrap { display: flex; align-items: center; gap: 4px; }
 
 .tt-logo .logo-main {
@@ -239,29 +239,51 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-
 .tt-program-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: #000;
+transition: transform 0.3s ease;
+
+}
+.tt-program-card:hover {
+  transform: translateY(-10px);
+}
+.tt-program-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0) 30%,
+    rgba(255,255,255,0.85) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+.card-1 {
+  background: url("../pic/55.png") no-repeat center/cover;
 }
 
-.tt-program-gradient {
-    height: 150px;
-    background: linear-gradient(135deg, #a88be8, #e4a1f8);
-    opacity: 0.8;
+/* CARD 2 */
+.card-2 {
+  background: url("../pic/555.png") no-repeat center/cover;
+}
+
+/* CARD 3 */
+.card-3 {
+  background: url("../pic/5555.png") no-repeat center/cover;
 }
 
 .tt-program-content {
-    padding: 30px;
-    flex: 1;
-    position: relative;
+  position: relative;
+  z-index: 2;
+  width: 100%; /* QUAN TRỌNG */
 }
-
 .tt-program-content h3 { font-size: 20px; margin-bottom: 20px; color: #000; }
 
 .tt-program-meta {
@@ -436,11 +458,21 @@ body {
     background-color: #003d82;
 }
 
+
 /* ===== FOOTER ===== */
 .site-footer {
-    background-color: var(--text-purple);
-    padding: 60px 5% 120px;
+  /* background-color: var(--text-purple); <-- Xóa hoặc comment dòng này */
+  /* Thay thế bằng gradient dựa trên hình ảnh */
+  background: linear-gradient(
+    to bottom,
+    #6e35dd 26%, /* Màu tím xanh ở vị trí 26% */
+    #9831a7 62% /* Màu tím đỏ ở vị trí 62% */
+  );
+  padding: 60px 5% 120px;
+}footer-section { /* Thay class này bằng class footer thực tế của bạn */
+    margin-top: 120px; /* Khoảng cách trắng được tạo ra phía trên footer */
 }
+
 .footer-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
@@ -466,7 +498,9 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
 }
-
+footer, .footer-section { /* Thay class này bằng class footer thực tế của bạn */
+    margin-top: 120px; /* Khoảng cách trắng được tạo ra phía trên footer */
+}
 @media (max-width: 1024px) {
     .footer-container { grid-template-columns: 1fr 1fr; gap: 60px; }
     .tt-programs-carousel { grid-template-columns: 1fr; }

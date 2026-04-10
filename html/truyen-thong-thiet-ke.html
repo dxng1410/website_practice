@@ -493,19 +493,37 @@ section.content-section{padding:70px 6%}
   border-color:#c020ee;box-shadow:0 0 0 3px rgba(192,32,238,.08);
 }
 .select-wrap{position:relative}
-.select-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:18px;color:#888;pointer-events:none}
-.btn-submit{
-  width:100%;padding:15px;
-  background:linear-gradient(90deg,#8b22cc,#c040ee);color:#fff;
-  border:none;border-radius:50px;font-size:16px;font-weight:700;
-  cursor:pointer;margin-top:6px;transition:opacity .2s,transform .2s;
+.select-arrow{
+  position:absolute;
+  right:30px;
+  top:40%;
+  transform:translateY(-50%);
+}.btn-submit{
+  width: fit-content;        /* thay vì 100% */
+  padding: 14px 40px;
+  margin: 20px auto 0;       /* căn giữa */
+  display: block;
+
+  background: linear-gradient(90deg,#8b22cc,#c040ee);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
 }
 .btn-submit:hover{opacity:.9;transform:translateY(-1px)}
 
 /* ===== FOOTER ===== */
 /* ===== FOOTER ===== */
 .site-footer {
-    background-color: var(--text-purple);
+    /* Đã lật ngược hướng: Màu tím đỏ sang trái, tím xanh sang phải */
+    background: linear-gradient(
+        to bottom, 
+        #6e35dd 26%, 
+        #9831a7 62%
+    );
     padding: 60px 5% 120px;
 }
 .footer-container {
@@ -587,7 +605,7 @@ section.content-section{padding:70px 6%}
 
 <header>
     <div class="logo">
-        <img src="../pic/logo_SMD.png" alt="SMD - School of Media Design" class="logo-img">
+        <img src="../pic/SMD Logo (1).png" alt="SMD - School of Media Design">
     </div>
     <nav>
         <ul>
@@ -663,7 +681,7 @@ section.content-section{padding:70px 6%}
       </div>
       <div class="roadmap-body">
         <p>Năm 1 trang bị nền tảng liên ngành cho sinh viên, kết hợp giữa tư duy thiết kế, kiến thức xã hội và kỹ năng truyền thông. Sinh viên được học các môn cơ bản như tiếng Anh, kinh tế, lịch sử nghệ thuật, đồng thời tiếp cận tư duy thiết kế và thực hành qua các studio đầu hoa. Bên cạnh đó, chương trình giải thiệu về truyền thông đại chúng, vai trò công đồng và các học phần tự chọn, giúp sinh viên định hình hướng đi cá nhân trong lĩnh vực truyền thông số.</p>
-        <button class="btn-xem-them" onclick="window.location.href='truyen_thong_thiet_ke.html'">Xem Thêm</button>
+        <button class="btn-xem-them" onclick="window.location.href='#'">Xem Thêm</button>
       </div>
     </div>
 
@@ -675,7 +693,7 @@ section.content-section{padding:70px 6%}
       </div>
       <div class="roadmap-body">
         <p>Năm 2 tập trung phát triển tư duy chiến lược và kỹ năng chuyên sâu trong truyền thông. Sinh viên được học về marketing, quản trị và hành vi trong lĩnh vực nghệ thuật – văn hóa, lịch sử tham gia các studio với nhu cầu sản xuất thực tế, xây dựng chiến lược nội dung và quảng cáo. Bên cạnh đó, chương trình giúp sinh viên hiểu và nghiên cứu cộng đồng người tiêu dùng; từ đó nâng cao khả năng ứng dụng trong môi trường thực tiễn.</p>
-        <button class="btn-xem-them" onclick="window.location.href='truyen_thong_thiet_ke.html'">Xem Thêm</button>
+        <button class="btn-xem-them" onclick="window.location.href='#'">Xem Thêm</button>
       </div>
     </div>
 
@@ -687,7 +705,7 @@ section.content-section{padding:70px 6%}
       </div>
       <div class="roadmap-body">
         <p>Năm 3 hướng đến phát triển chuyên môn sâu và khả năng ứng dụng thực tế. Sinh viên được tiếp cận các lĩnh vực như UI/UX, truyền thông xã hội, công nghệ mới và xu hướng truyền thông hiện đại, đồng thời rèn luyện tư duy khởi nghiệp và chiến lược nội dung. Các hoạt động project giúp sinh viên trực tiếp tham gia sản xuất, tổ chức sự kiện và phát triển sản phẩm số. Bên cạnh đó, chương trình tích hợp trải nghiệm thực tế và thực tập, tạo nền tảng vững chắc cho môi trường làm việc chuyên nghiệp.</p>
-        <button class="btn-xem-them" onclick="window.location.href='truyen_thong_thiet_ke.html'">Xem Thêm</button>
+        <button class="btn-xem-them" onclick="window.location.href='#'">Xem Thêm</button>
       </div>
     </div>
 
@@ -699,7 +717,7 @@ section.content-section{padding:70px 6%}
       </div>
       <div class="roadmap-body">
         <p>Năm 4 tập trung hoàn thiện năng lực chuyên môn thông qua đồ án tốt nghiệp. Sinh viên vận dụng toàn bộ kiến thức và kỹ năng đã tích lũy để phát triển một dự án truyền thông hoặc sản phẩm sáng tạo hoàn chỉnh, thể hiện tư duy cá nhân và khả năng làm việc trong mọi trường thực tế.</p>
-        <button class="btn-xem-them" onclick="window.location.href='truyen_thong_thiet_ke.html'">Xem Thêm</button>
+        <button class="btn-xem-them" onclick="window.location.href='#'">Xem Thêm</button>
       </div>
     </div>
 
@@ -711,7 +729,7 @@ section.content-section{padding:70px 6%}
       </div>
       <div class="roadmap-body">
         <p>Các môn tự chọn giúp sinh viên linh hoạt phát triển kỹ năng cá nhân và định hướng chuyên môn, từ kỹ năng mềm như tư duy tích cực, lãnh đạo, viết lách đến các lĩnh vực sáng tạo như truyền thông kỹ thuật số và làm phim.</p>
-        <button class="btn-xem-them" onclick="window.location.href='truyen_thong_thiet_ke.html'">Xem Thêm</button>
+        <button class="btn-xem-them" onclick="window.location.href='#'">Xem Thêm</button>
       </div>
     </div>
 

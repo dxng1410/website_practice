@@ -55,19 +55,21 @@
     padding: 20px 5%;
     transition: all 0.3s ease;
 }
-
+.logo{
+    display: flex;
+    align-items: center;
+    }
 .logo-img {
-    height: 48px;
-    width: auto;
-    object-fit: contain;
+    width: 120px;       /* Đặt chiều rộng cố định 120px */
+    height: 86px;       /* Đặt chiều cao cố định 86px */
+    object-fit: contain; /* Giúp logo không bị méo nếu tỷ lệ ảnh gốc khác 120x86 */
     display: block;
-
-    /* ← Thêm dòng này để chuyển sang màu tím #6a2b86 */
-    filter: invert(18%) sepia(64%) saturate(1011%) hue-rotate(263deg) brightness(90%) contrast(107%);
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
 
 .dt-header .logo-main { 
-    color: #fff; 
+    color: #e2e0e0; 
     font-size: 38px; 
     font-weight: 900; 
     font-style: italic; 
@@ -204,7 +206,13 @@ nav li.active a, nav a:hover {
     right: 8%;
     bottom: 40px;
 }
-
+.btn-dangky-hero,
+.btn-quiz {
+    display: flex;
+    align-items: center;      /* căn giữa theo chiều dọc */
+    justify-content: center;  /* căn giữa theo chiều ngang */
+    text-align: center;
+}
 .btn-dangky-hero {
     background: var(--btn-gradient);
     color: #fff;
@@ -216,6 +224,7 @@ nav li.active a, nav a:hover {
     cursor: pointer;
     transition: transform 0.2s;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .btn-dangky-hero:hover {
@@ -262,7 +271,7 @@ nav li.active a, nav a:hover {
     font-weight: 800;
     color: #111;
     padding: 32px 0 16px;
-    border-bottom: 1.5px solid #ede8f8;
+    /* border-bottom: 1.5px solid #ede8f8; */
 }
 
 .program-list {
@@ -536,8 +545,15 @@ nav li.active a, nav a:hover {
 .select-wrap select:focus { border-color: #c020ee; box-shadow: 0 0 0 3px rgba(192,32,238,0.08); }
 
 .select-wrap { position: relative; }
-.select-arrow { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 20px; color: #888; pointer-events: none; }
-
+.select-arrow {
+    position: absolute;
+    right:30px;
+    top: 35%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #888;
+    pointer-events: none;
+}
 .btn-submit {
     width: 100%;
     padding: 15px;
@@ -551,12 +567,21 @@ nav li.active a, nav a:hover {
     margin-top: 6px;
     transition: opacity 0.2s, transform 0.2s;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;      /* căn giữa dọc */
+    justify-content: center;  /* căn giữa ngang */
+    text-align: center;
 }
 .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
 
 /* ===== FOOTER ===== */
 .site-footer {
-    background-color: var(--text-purple);
+    /* Đã lật ngược hướng: Màu tím đỏ sang trái, tím xanh sang phải */
+    background: linear-gradient(
+        to bottom, 
+        #6e35dd 26%, 
+        #9831a7 62%
+    );
     padding: 60px 5% 120px;
 }
 .footer-container {

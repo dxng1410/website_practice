@@ -43,14 +43,14 @@ header {
 }
 
 .logo-img {
-    height: 48px;
-    width: auto;
-    object-fit: contain;
+    width: 120px;       /* Đặt chiều rộng cố định 120px */
+    height: 86px;       /* Đặt chiều cao cố định 86px */
+    object-fit: contain; /* Giúp logo không bị méo nếu tỷ lệ ảnh gốc khác 120x86 */
     display: block;
-
-    /* ← Thêm dòng này để chuyển sang màu tím #6a2b86 */
-    filter: invert(18%) sepia(64%) saturate(1011%) hue-rotate(263deg) brightness(90%) contrast(107%);
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
+
 
 .logo-icon-wrap {
     display: flex;
