@@ -2,7 +2,12 @@
    TRUYEN_THONG_THIET_KE.CSS
    Chi tiết ngành Truyền Thông & Thiết Kế
    ============================================================ */
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Ép toàn bộ web dùng Roboto */
+}
 :root {
     --bg-pink: #F7DAFC;
     --text-purple: #6a2b86;
@@ -34,9 +39,9 @@
     left: 3px;
     top: 75px;
     
-    font-family: 'Poppins', sans-serif;
-    font-style: ExtraBold;
-    font-weight: 800;
+    font-family: 'Roboto', sans-serif; /* Thay đổi ở đây */
+    font-style: normal; /* "ExtraBold" không phải là thuộc tính font-style hợp lệ */
+    font-weight: 900;   /* Dùng 900 để thay cho ExtraBold */
     font-size: 45px;
     line-height: 150%;
     display: flex;
@@ -44,11 +49,9 @@
     letter-spacing: -0.011em;
     
     color: #ffffff;
-    
     margin: 0;
     text-transform: uppercase;
 }
-
 .hero-subtitle {
     font-size: 14px;
     color: #ffffff;

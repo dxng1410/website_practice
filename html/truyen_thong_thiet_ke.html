@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMD - Truyền Thông & Thiết Kế</title>
@@ -13,34 +14,30 @@
 <!-- ===== FULLSCREEN HERO ===== -->
 <section class="hero-fullscreen" id="hero-top">
     <!-- Fixed header bên trong hero -->
-    <header class="dt-header">
-        <div class="logo">
-            <div class="logo-icon-wrap">
-                <span class="logo-main">SMD</span>
-                <span class="logo-leaf">🌿</span>
-            </div>
-            <span class="logo-sub">SCHOOL OF MEDIA DESIGN</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Trang Chủ</a></li>
-                <li><a href="#">Giới Thiệu</a></li>
-                <li><a href="daotao.html">Đào Tạo</a></li>
-                <li><a href="#">Nghiên Cứu</a></li>
-                <li><a href="truyen_thong.html">Truyền Thông</a></li>
-                <li><a href="index.html">Góc Sinh Viên</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <button class="lang-btn">VIE <span class="dot"></span></button>
-            <button class="search-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
-        </div>
-    </header>
+    <header>
+    <div class="logo">
+        <img src="../pic/logo_SMD.png" alt="SMD - School of Media Design" class="logo-img">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="trangchu.html">Trang Chủ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li class="active"><a href="daotao.html">Đào Tạo</a></li>
+            <li><a href="#">Nghiên Cứu</a></li>
+            <li><a href="truyen_thong.html">Truyền Thông</a></li>
+            <li><a href="index.html">Góc Sinh Viên</a></li>
+        </ul>
+    </nav>
+    <div class="header-actions">
+        <button class="lang-btn" id="langToggle">VIE <span class="dot"></span></button>
+        <button class="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
+</header>
 
     <!-- Hero content 2 cột -->
     <div class="hero-container">
@@ -345,4 +342,13 @@
 </script>
 
 </body>
+<script>
+const langBtn = document.getElementById('langToggle');
+if (langBtn) {
+    langBtn.addEventListener('click', () => {
+        const t = langBtn.childNodes[0];
+        t.nodeValue = t.nodeValue.trim() === 'VIE' ? 'ENG ' : 'VIE ';
+    });
+}
+</script>
 </html>

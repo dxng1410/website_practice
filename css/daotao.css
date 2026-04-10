@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
 /* ============================================================
    DAOTAO.CSS
    ============================================================ */
@@ -13,7 +15,11 @@
     --quiz-title-clr: #1a0a2e;
     --quiz-desc-clr: #4e356d;
     --quiz-shadow: 0 22px 60px rgba(183, 95, 199, 0.12);
-    --primary-btn: #b75fc7; /* Màu ví dụ cho nút */
+    --primary-btn: #b75fc7;
+}
+
+* {
+    font-family: 'Roboto', 'Inter', 'Segoe UI', sans-serif;
 }
 
 /* ===== FULLSCREEN HERO ===== */
@@ -27,7 +33,6 @@
     overflow: hidden;
 }
 
-/* Subtle animated mesh overlay */
 .hero-fullscreen::before {
     content: "";
     position: absolute;
@@ -51,12 +56,15 @@
     transition: all 0.3s ease;
 }
 
-/* Khi cuộn xuống — header tối lại */
-/* .dt-header.scrolled {
-    padding: 10px 5%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-} */
+.logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+
+    /* ← Thêm dòng này để chuyển sang màu tím #6a2b86 */
+    filter: invert(18%) sepia(64%) saturate(1011%) hue-rotate(263deg) brightness(90%) contrast(107%);
+}
 
 .dt-header .logo-main { 
     color: #fff; 
@@ -73,7 +81,6 @@
     margin-top: 1px; 
 }
 
-/* Thanh Navigation phong cách "Pill" hôm qua */
 nav{
     color:#6a2b86;
     background-color: var(--bg-pink);
@@ -116,11 +123,10 @@ nav li.active a, nav a:hover {
     transform: translateY(-1.5px);
 }
 
-/* Nút chức năng bên phải */
 .dt-header .header-actions { display: flex; align-items: center; gap: 12px; }
 
 .dt-header .lang-btn { 
-    background: var(--bg-pink); /* Đồng bộ màu với nav */
+    background: var(--bg-pink);
     border: none; 
     padding: 10px 18px; 
     border-radius: 30px; 
@@ -130,7 +136,8 @@ nav li.active a, nav a:hover {
     display: flex; 
     align-items: center; 
     gap: 8px; 
-    cursor: pointer; 
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 }
 
 .dt-header .lang-btn .dot { 
@@ -152,6 +159,7 @@ nav li.active a, nav a:hover {
     cursor: pointer; 
     color: var(--text-purple); 
 }
+
 /* ===== HERO CENTER CONTENT ===== */
 .hero-center {
     flex: 1;
@@ -209,6 +217,7 @@ nav li.active a, nav a:hover {
     border: none;
     cursor: pointer;
     transition: transform 0.2s;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-dangky-hero:hover {
@@ -216,7 +225,6 @@ nav li.active a, nav a:hover {
     box-shadow: 0 10px 32px rgba(155, 48, 238, 0.6);
 }
 
-/* Scroll indicator */
 .scroll-indicator {
     position: absolute;
     bottom: 32px;
@@ -249,9 +257,7 @@ nav li.active a, nav a:hover {
 .dt-main { background: #fff; }
 
 /* ===== DEGREE GROUPS ===== */
-.degree-group {
-    padding: 0 5%;
-}
+.degree-group { padding: 0 5%; }
 
 .degree-label {
     font-size: 20px;
@@ -281,7 +287,6 @@ nav li.active a, nav a:hover {
 }
 .program-item:hover { transform: scale(1.005); }
 
-/* Ảnh nền — full fill */
 .program-item-bg {
     position: absolute;
     inset: 0;
@@ -295,11 +300,9 @@ nav li.active a, nav a:hover {
     display: block;
 }
 
-/* Đại Học: 1 ảnh chia đôi cho 2 card */
 .program-bg-img--top    { object-position: center 15%; }
 .program-bg-img--bottom { object-position: center 85%; }
 
-/* Gradient overlay — che phần dưới để text dễ đọc */
 .program-overlay {
     position: absolute;
     inset: 0;
@@ -311,7 +314,6 @@ nav li.active a, nav a:hover {
     );
 }
 
-/* Content sits on top */
 .program-item-content {
     position: relative;
     z-index: 2;
@@ -365,6 +367,7 @@ nav li.active a, nav a:hover {
     white-space: nowrap;
     flex-shrink: 0;
     transition: background 0.2s, transform 0.2s;
+    font-family: 'Roboto', sans-serif;
 }
 .btn-xem-them:hover { background: rgba(255,255,255,0.35); transform: translateY(-1px); }
 
@@ -412,7 +415,6 @@ nav li.active a, nav a:hover {
 }
 
 /* ===== QUIZ SECTION ===== */
-/* ===== QUIZ SECTION ===== */
 .quiz-section {
     background: var(--quiz-bg);
     border-top: 1.5px solid var(--quiz-border);
@@ -430,14 +432,12 @@ nav li.active a, nav a:hover {
     justify-content: space-between;
     gap: 40px;
     background: var(--quiz-card);
-    border-radius: 40px; /* Giảm nhẹ bo góc để trông hiện đại hơn */
+    border-radius: 40px;
     padding: 40px 60px;
     box-shadow: var(--quiz-shadow);
 }
 
-.quiz-text {
-    flex: 1;
-}
+.quiz-text { flex: 1; }
 
 .quiz-title {
     font-size: clamp(24px, 4vw, 36px);
@@ -471,19 +471,12 @@ nav li.active a, nav a:hover {
     flex-shrink: 0;
     transition: transform 0.2s, box-shadow 0.2s;
     align-self: center;
+    font-family: 'Roboto', sans-serif;
 }
 .btn-quiz:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(150,30,240,0.42); }
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 992px) {
-    .quiz-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px;
-    }
-    
-    .quiz-title {
-        max-width: 100%;
-    }
+    .quiz-content { flex-direction: column; text-align: center; padding: 40px; }
 }
 
 /* ===== FORM SECTION ===== */
@@ -535,6 +528,7 @@ nav li.active a, nav a:hover {
     appearance: none;
     -webkit-appearance: none;
     transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: 'Roboto', sans-serif;
 }
 .form-group input:focus,
 .select-wrap select:focus { border-color: #c020ee; box-shadow: 0 0 0 3px rgba(192,32,238,0.08); }
@@ -543,7 +537,6 @@ nav li.active a, nav a:hover {
 .select-arrow { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 20px; color: #888; pointer-events: none; }
 
 .btn-submit {
-    background: var(--btn-gradient);
     width: 100%;
     padding: 15px;
     background: linear-gradient(90deg, #8b22cc, #c040ee);
@@ -555,18 +548,19 @@ nav li.active a, nav a:hover {
     cursor: pointer;
     margin-top: 6px;
     transition: opacity 0.2s, transform 0.2s;
+    font-family: 'Roboto', sans-serif;
 }
 .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
 
 /* ===== FOOTER ===== */
 .site-footer {
     background-color: var(--text-purple);
-    padding: 60px 5%;
+    padding: 60px 5% 120px;
 }
 .footer-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
-    gap: 40px;
+    gap: 120px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -597,21 +591,15 @@ nav li.active a, nav a:hover {
     color: #FFFFFF;
     margin-bottom: 25px;
 }
-.links-col ul {
-    list-style: none;
-}
-.links-col ul li {
-    margin-bottom: 12px;
-}
+.links-col ul { list-style: none; }
+.links-col ul li { margin-bottom: 12px; }
 .links-col ul li a {
     color: #CACACA;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
 }
-.links-col ul li a:hover {
-    color: #FFFFFF;
-}
+.links-col ul li a:hover { color: #FFFFFF; }
 .social-links {
     display: flex;
     gap: 15px;
@@ -626,20 +614,11 @@ nav li.active a, nav a:hover {
     border-radius: 5px;
 }
 
-/* ===== RESPONSIVE CƠ BẢN ===== */
 @media (max-width: 1024px) {
-    .title-gradient { font-size: 80px; }
-    .main-nav a { padding: 10px 15px; font-size: 14px; }
-    .footer-container { grid-template-columns: 1fr 1fr; }
+    .footer-container { grid-template-columns: 1fr 1fr; gap: 60px; }
 }
 
 @media (max-width: 768px) {
-    .site-header { flex-direction: column; gap: 20px; }
-    .main-nav ul { flex-wrap: wrap; justify-content: center; }
-    .members-photos, .team-info { grid-template-columns: repeat(2, 1fr); }
-    .title-gradient { font-size: 50px; }
-    .banner-content h1 { font-size: 32px; }
-    .footer-container { grid-template-columns: 1fr; }
-    .team-info { margin-top: 0; padding-top: 10px; }
+    .footer-container { grid-template-columns: 1fr; gap: 40px; }
+    .experience-grid { grid-template-columns: 1fr; }
 }
-

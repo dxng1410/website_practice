@@ -9,33 +9,29 @@
 <body>
     <div class="gradient-bg">
         <header>
-            <div class="logo">
-                <div class="logo-icon-wrap">
-                    <span class="logo-main">SMD</span>
-                    <span class="logo-leaf">🌿</span>
-                </div>
-                <span class="logo-sub">SCHOOL OF MEDIA DESIGN</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="trangchu.html">Trang Chủ</a></li>
-                    <li><a href="#">Giới Thiệu</a></li>
-                    <li><a href="daotao.html">Đào Tạo</a></li>
-                    <li><a href="#">Nghiên Cứu</a></li>
-                    <li><a href="truyen_thong.html">Truyền Thông</a></li>
-                    <li class="active"><a href="daotao.html">Góc Sinh Viên</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <!-- <button class="lang-btn">VIE <span class="dot"></span></button> -->
-                <button class="search-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
-            </div>
-        </header>
+    <div class="logo">
+        <img src="../pic/logo_SMD.png" alt="SMD - School of Media Design" class="logo-img">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="trangchu.html">Trang Chủ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="daotao.html">Đào Tạo</a></li>
+            <li><a href="#">Nghiên Cứu</a></li>
+            <li><a href="truyen_thong.html">Truyền Thông</a></li>
+            <li class="active"><a href="index.html">Góc Sinh Viên</a></li>
+        </ul>
+    </nav>
+    <div class="header-actions">
+        <button class="lang-btn" id="langToggle">VIE <span class="dot"></span></button>
+        <button class="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
+</header>
 
         <section class="hero">
             <div class="hero-text">
@@ -120,4 +116,13 @@
 
     <script src="script.js"></script>
 </body>
+<script>
+const langBtn = document.getElementById('langToggle');
+if (langBtn) {
+    langBtn.addEventListener('click', () => {
+        const t = langBtn.childNodes[0];
+        t.nodeValue = t.nodeValue.trim() === 'VIE' ? 'ENG ' : 'VIE ';
+    });
+}
+</script>
 </html>
