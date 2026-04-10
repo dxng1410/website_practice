@@ -11,7 +11,7 @@
 :root {
     --bg-pink: #F7DAFC; 
     --text-purple: #6a2b86;
-    --accent-purple: #7c1faa;
+    --accent-purple: #f5f1f7; /* #c462f5 */
     --glass-inner: rgba(255, 255, 255, 0.25);
     --btn-gradient: linear-gradient(90deg, #9b30ee, #cc55ff);
 }
@@ -165,7 +165,7 @@ body {
     min-height: 800px;
     display: flex;
     align-items: center;
-    padding: 100px 40px 40px;
+    padding: 100px 225px 40px;
     position: relative;
     overflow: hidden;
 }
@@ -182,7 +182,7 @@ body {
     font-size: 80px;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
 }
 
 .tt-hero-subtitle {
