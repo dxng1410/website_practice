@@ -23,11 +23,10 @@ body {
 
 /* ===== HEADER & NAV ===== */
 .gradient-bg {
-    background: radial-gradient(ellipse at 50% 40%, #fbedfe 0%, #e8d5fc 40%, #d8e5ff 70%, #dce8ff 100%);
-    position: relative;
-    padding-bottom: 0;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    background: #ffffff !important;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -368,7 +367,7 @@ nav li.active a, nav a:hover {
 .main-article figure { margin: 30px 0; text-align: center; }
 .main-article figure img { width: 100%; max-width: 800px; border-radius: 8px; height: auto; }
 .main-article figcaption { font-size: 14px; font-style: italic; color: #777777; margin-top: 10px; }
-.author-credit { text-align: right; font-style: italic; font-weight: 500; margin-top: 50px; }
+.author-credit { text-align: right; font-style: italic; font-weight: 500; margin-top: 50px;  }
 
 /* --- CỘT PHẢI (SIDEBAR) --- */
 .sidebar-title {
