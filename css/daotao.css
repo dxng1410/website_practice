@@ -26,7 +26,7 @@
 .hero-fullscreen {
     height: 100vh;
     min-height: 600px;
-    background: url("../pic/Rectangle\ 6.png") center/cover no-repeat;
+    background: url("../pic/Group 2292.png") center/cover no-repeat;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -182,17 +182,15 @@ nav li.active a, nav a:hover {
 }
 
 .hero-big-title {
-    font-size: clamp(72px, 10vw, 130px);
+    font-family: 'Roboto', sans-serif; /* Đảm bảo dùng Roboto */
+    font-size: 80px;
     font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: -2px;
-    margin-bottom: 24px;
-    background: linear-gradient(135deg, #fff 40%, var(--bg-pink) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2; /* Tăng khoảng cách dòng để dấu nặng có chỗ hiện ra */
+    padding-bottom: 10px; /* Tạo khoảng trống phía dưới chữ */
+    text-transform: uppercase; 
 }
-
 .hero-desc {
     font-size: 17px;
     color: rgba(255,255,255,0.72);
@@ -383,7 +381,7 @@ nav li.active a, nav a:hover {
     font-weight: 800;
     color: #111;
     margin-bottom: 52px;
-    text-align: center;
+    text-align: left;
 }
 
 .experience-grid {
@@ -399,7 +397,11 @@ nav li.active a, nav a:hover {
     text-align: center;
     gap: 20px;
 }
-
+.exp-icon-wrap img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Giúp ảnh luôn nằm gọn trong khung */
+}
 .exp-icon-wrap {
     width: 80px;
     height: 80px;
@@ -440,7 +442,7 @@ nav li.active a, nav a:hover {
 .quiz-text { flex: 1; }
 
 .quiz-title {
-    font-size: clamp(24px, 4vw, 36px);
+    font-size: clamp(4vw, 36px);
     font-weight: 800;
     color: var(--quiz-title-clr);
     margin-bottom: 12px;
@@ -448,7 +450,7 @@ nav li.active a, nav a:hover {
 }
 
 .quiz-desc {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--quiz-desc-clr);
     line-height: 1.6;
     margin: 0;
