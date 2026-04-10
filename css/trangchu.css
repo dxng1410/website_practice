@@ -487,3 +487,14 @@ nav li.active a, nav a:hover {
     .footer-container { grid-template-columns: 1fr; gap: 40px; }
     .team-info { margin-top: 0; padding-top: 10px; }
 }
+.program-detail-main {
+    /* Đảm bảo nội dung không bị đẩy lên quá header */
+    margin-top: 100px;
+    
+    /* Chỉnh lại min-height để nó ngắn hơn bản desktop, 
+       tạo không gian cho nội dung mobile */
+    min-height: 80vh; 
+    
+    /* Màu nền phù hợp với ảnh của bạn, giúp phần transition mượt hơn */
+    background-color: #000; 
+}
